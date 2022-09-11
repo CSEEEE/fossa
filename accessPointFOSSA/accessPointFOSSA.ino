@@ -1,11 +1,11 @@
 
-// FOSSA WITH ACCESS-POINT
+// ZEUS WITH ACCESS-POINT
 
 //========================================================//
 //============EDIT IF USING DIFFERENT HARDWARE============//
 //========================================================//
 
-bool format = false; // true for formatting FOSSA memory, use once, then make false and reflash
+bool format = false; // true for formatting ZEUS memory, use once, then make false and reflash
 
 #define BTN1 39 //Screen tap button
 
@@ -335,7 +335,7 @@ void setup()
   config.apid = "Device-" + String((uint32_t)ESP.getEfuseMac(), HEX);
   config.psk = password;
   config.menuItems = AC_MENUITEM_CONFIGNEW | AC_MENUITEM_OPENSSIDS | AC_MENUITEM_RESET;
-  config.title = "FOSSA";
+  config.title = "ZEUS";
   config.reconnectInterval = 1;
 
   if (triggerAp == true)
@@ -390,14 +390,14 @@ void logo()
   tft.setCursor(130, 100);
   tft.setTextSize(10);
   tft.setTextColor(TFT_PURPLE);
-  tft.println("FOSSA");
+  tft.println("ZEUS");
   tft.setTextColor(TFT_WHITE);
   tft.setCursor(40, 170);
   tft.setTextSize(3);
   tft.println("Bitcoin Lightning ATM");
   tft.setCursor(300, 290);
   tft.setTextSize(2);
-  tft.println("(GRIFF Edition)");
+  tft.println("(Gold Edition)");
 }
 
 void feedmefiat()
